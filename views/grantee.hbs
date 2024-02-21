@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@{{ grantee.identifier }} - apoia.cafe</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script type="text/javascript">tailwind.config = { theme: { extend: { colors: {
+        'ac-gray': '#e0e0dd',
+        'ac-dark-gray': '#d8d8d5'
+    } } } }</script>
+    <link rel="stylesheet" href="./style/root.css">
+</head>
+<body class="flex items-center justify-between flex-col px-8 py-12 bg-ac-gray">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    <div class="flex items-center flex-col gap-4">
+        <img class="w-32 h-32 border-2 border-ac-dark-gray ring ring-orange-400 rounded-full" src="https://media.discordapp.net/attachments/902656010102145094/1132393189886668900/3dc590df1f54c2cd68d4e6f8b129fba1.jpg" alt="Default Icon">
+        <div class="text-center">
+            <h1 class="text-2xl font-[Poppins] font-[700]">{{ grantee.identifier }}</h1>
+            <p class="text-xs">ai, me apoia ai namoralzinha p eu compra um pc</p>
+        </div>
+    </div>
+
+    <div>
+        a
+    </div>
+
+    <div class="w-full">
+        <button class="font-[Poppins] w-full flex items-center justify-center flex-row gap-2 py-2 text-white bg-orange-400 rounded-lg" type="button">
+            <span>apoiar como</span>
+            <img class="ml-2 w-8 h-8 rounded-full" src="https://media.discordapp.net/attachments/902656010102145094/1132393189886668900/3dc590df1f54c2cd68d4e6f8b129fba1.jpg" alt="Default Icon">
+            <span class="font-[700]">{{ user.identifier }}</span>
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                  String              @id @default(uuid())
+  email               String              
+  password            String
+  identifier          String
+  wallet              Float               @default(0)
+  withdrawal_requests WithdrawalRequest[]
+}
+
+model WithdrawalRequest {
+  id         String   @id @default(uuid())
+  created_at DateTime @default(now())
+  status     String
+  value      Float
+  from       User     @relation(fields: [user_id], references: [id])
+  user_id    String
+}
+
+model Payment {
+  id                  BigInt   @id
+  created_at          DateTime @default(now())
+  status              String
+  transaction_amount  Float
+  payer               String
+  to                  String 
+  message             String   @default(dbgenerated("' '"))
+  payment_code        String
+  base64_payment_code String
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecte-se - apoia.cafe</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script type="text/javascript">tailwind.config = { theme: { extend: { colors: {
+        'ac-gray': '#e0e0dd',
+        'ac-dark-gray': '#d8d8d5'
+    } } } }</script>
+    <link rel="stylesheet" href="./style/root.css">
+</head>
+<body class="flex items-center justify-center flex-col gap-8 bg-ac-gray">
+    <a class="flex items-center gap-3 select-none" href="#">
+        <svg class="w-8 h-8 fill-orange-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <path d="M212,76H32A12,12,0,0,0,20,88v48a100.24,100.24,0,0,0,26.73,68H32a12,12,0,0,0,0,24H208a12,12,0,0,0,0-24H193.27a100.75,100.75,0,0,0,20-32A44,44,0,0,0,256,128v-8A44.05,44.05,0,0,0,212,76Zm-16,60a76.27,76.27,0,0,1-42,68H86a76.27,76.27,0,0,1-42-68V100H196Zm36-8a20,20,0,0,1-12.57,18.55A97.17,97.17,0,0,0,220,136V101.68A20,20,0,0,1,232,120ZM68,48V24a12,12,0,0,1,24,0V48a12,12,0,0,1-24,0Zm40,0V24a12,12,0,0,1,24,0V48a12,12,0,0,1-24,0Zm40,0V24a12,12,0,0,1,24,0V48a12,12,0,0,1-24,0Z"></path>
+        </svg>
+        <h1 class="font-[Poppins] font-[700] text-2xl text-orange-400">apoia.cafe</h1>
+    </a>
+
+    <div class="flex flex-col text-center md:text-left bg-ac-gray md:bg-ac-dark-gray gap-4 items-start p-8 rounded-lg">
+        <div>
+            <h1 class="font-[Poppins] text-3xl font-[700]">Conecte-se para<br>continuar</h1>
+            <p class="mt-1">Ainda não possui uma conta? Que tal se <a class="underline" href="#">cadastrar</a>?</p>
+        </div>
+
+        <form class="w-full flex flex-col gap-2" action="/api/auth/login" method="post">
+            <input class="outline-none py-2 px-6 rounded-lg bg-ac-dark-gray md:bg-ac-gray" type="email" name="email" id="email" placeholder="Digite seu e-mail">
+            <input class="outline-none py-2 px-6 rounded-lg bg-ac-dark-gray md:bg-ac-gray" type="password" name="password" id="password" placeholder="Sua senha">
+            <button class="outline-none py-2 px-6 rounded-lg flex justify-center transition-all duration-200 bg-orange-400 hover:brightness-90" type="submit">
+                <svg class="w-6 h-6 fill-white animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,61.59,40,93.27,40,128a88,88,0,0,0,176,0c0-34.73-20.15-66.41-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z"></path>
+                </svg>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
